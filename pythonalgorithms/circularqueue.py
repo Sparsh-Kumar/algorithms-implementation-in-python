@@ -68,7 +68,7 @@ def main ():
         display ()
 
     print ('Deletion taking place')
-    for i in range (1, 6, 1):
+    for i in range (1, 4, 1):
         print ('Iteration = ',i)
         remove ()
         display ()
