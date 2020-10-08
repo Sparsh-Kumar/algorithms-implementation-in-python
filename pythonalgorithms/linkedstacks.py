@@ -11,14 +11,15 @@ class Node:
 class Stack:
     def __init__ (self):
         self.top = None
-    def push (self, cargo):
-        node = Node (cargo)
-        if not self.top:
-            self.top = node;
-        else:
-            startNode = self.top
-            node.next = startNode
-            self.top = node
+    def push (self, cargo = None):
+        if cargo:
+            node = Node (cargo)
+            if not self.top:
+                self.top = node;
+            else:
+                startNode = self.top
+                node.next = startNode
+                self.top = node
     def pop (self):
         item = None
         if self.top:

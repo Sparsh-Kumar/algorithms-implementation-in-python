@@ -12,20 +12,21 @@ class Stack:
         self.top = None;
         self.stacklength = 0;
     def push (self, cargo = None):
-        node = Node (cargo)
-        if not self.top:
-            self.top = node;
-        else:
-            startNode = self.top
-            node.next = startNode
-            self.top = node
-        self.stacklength = self.stacklength + 1;
+        if cargo:
+            node = Node (cargo)
+            if not self.top:
+                self.top = node;
+            else:
+                startNode = self.top
+                node.next = startNode
+                self.top = node
+            self.stacklength = self.stacklength + 1;
     def pop (self):
         item = None
         if self.top:
             item = self.top
             self.top = self.top.next
-        self.stacklength = self.stacklength - 1;
+            self.stacklength = self.stacklength - 1;
         return item
     def display (self):
         startNode = self.top
