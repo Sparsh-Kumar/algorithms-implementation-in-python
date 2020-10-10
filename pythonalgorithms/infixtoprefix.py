@@ -91,7 +91,7 @@ def main ():
     expression = '(A+B)*(C+D)'
     prefix = infixtoprefix (expression)
     if not prefix:
-        print ('Expression is not correct')
+        print ('Expression is not correct or error in code')
     else:
         print (prefix)
 
