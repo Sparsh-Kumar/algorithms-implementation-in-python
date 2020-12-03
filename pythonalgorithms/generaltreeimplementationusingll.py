@@ -100,6 +100,8 @@ class Tree:
 			return None;
 		elif identifier == 0:
 			return self.__rootnode
+		elif root.getId () == identifier:
+			return root;
 		else:
 			firstChild = root.getChild ()
 			while firstChild:
